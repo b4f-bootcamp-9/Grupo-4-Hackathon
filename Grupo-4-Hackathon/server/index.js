@@ -1,8 +1,9 @@
 const express = require('express');
 const cors = require('cors');
-const { connectToDatabase } = require("./data/Mongodb");
+const { connectToDatabase } = require("./data/MongoDB");
 const pedidosRoutes = require('./routes/PedidosRoutes');
 const userRoutes = require('./routes/UserRoutes');
+const contactRoutes = require('./routes/ContactRoutes');
 
 const app = express();
 app.use(cors());
@@ -13,9 +14,10 @@ const startServer = async () => {
         await connectToDatabase();
         console.log('Database is ready');
 
-        // Mount the routes
+        // Mount all routes
         app.use("/orders", pedidosRoutes);
         app.use("/api", userRoutes);
+        app.use("/contacts", contactRoutes);
 
         app.get("/", (req, res) => {
             res.send("Hello World!");

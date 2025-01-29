@@ -1,0 +1,262 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f4f7; /* Soft background color */
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Form container styles */
+.form-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.9); /* Subtle white background */
+  backdrop-filter: blur(15px);
+  border: 2px solid #d1d1d1; /* Lighter border color */
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Step container styles */
+.step-container {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Typography */
+.text-box-one,
+h2 {
+  color: #333;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+h3 {
+  color: #333;
+  font-size: 1.4rem;
+  margin: 1.5rem 0 1rem;
+  text-align: center;
+}
+
+/* Radio group styles */
+.radio-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.radio-label {
+  position: relative;
+  padding: 1rem;
+  background: #f8f9fa;
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.radio-label:hover {
+  background: #f1f3f5;
+  transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+.radio-label input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.radio-label input[type="radio"]:checked + span {
+  color: #3498db;
+}
+
+.radio-label input[type="radio"]:checked + span::before {
+  content: '✓';
+  position: absolute;
+  right: 1rem;
+  color: #3498db;
+}
+
+/* Button styles */
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+button {
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 200px; /* To prevent buttons from being too wide */
+}
+
+button.next {
+  background: #3498db;
+  color: white;
+}
+
+button.next:hover {
+  background: #2980b9;
+  transform: translateY(-2px);
+}
+
+button.prev {
+  background: #e9ecef;
+  color: #5f5f5f;
+}
+
+button.prev:hover {
+  background: #dee2e6;
+  transform: translateY(-2px);
+}
+
+/* Input group styles */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+input[type="text"],
+select {
+  padding: 1rem;
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  width: 100%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+input[type="text"]:focus,
+select:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+/* Success message styles */
+.success-message {
+  text-align: center;
+  padding: 2rem;
+}
+
+.success-message img {
+  display: block;
+  margin: 20px auto;
+  max-width: 150px;
+  border-radius: 10px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .form-container {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  .radio-group {
+    grid-template-columns: 1fr;
+  }
+
+  button {
+    padding: 0.8rem 1.5rem;
+  }
+
+  .text-box-one,
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Router-specific styles */
+.router-container {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.error-banner {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  border-left: 4px solid #dc3545;
+  padding: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  z-index: 1000;
+}
+
+.error-banner button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.2rem 0.5rem;
+  color: #666;
+}
+
+.error-banner button:hover {
+  color: #333;
+}
+
+/* Disable button styles */
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+button:disabled:hover {
+  transform: none;
+}

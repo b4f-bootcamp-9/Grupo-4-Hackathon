@@ -1,86 +1,18 @@
-import React, { useState } from 'react';
-import Step1 from './components/Step1';
-import Step2 from './components/Step2';
-import Step3 from './components/Step3';
-import Step4 from './components/Step4';
-import Step5 from './components/Step5';
-import Step6 from './components/Step6';
-import './App.css'; // Importando o CSS para o aplicativo
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import FormPage from '../src/components/FormPage/FormPage'; 
+import HomePage from '../src/components/HomePage/HomePage'; 
+import ContactPage from '../src/components/ContactPage/ContactPage';
 
 const App = () => {
-  // Controle de etapas e dados do formulário
-  const [step, setStep] = useState(1);
-  const [formData, setFormData] = useState({
-    genero: '',
-    faixaEtaria: '',
-    tamanho: '',
-    epoca: '',
-    entrega: {
-      nome: '',
-      morada: '',
-      juntaFreguesia: '',
-      codigoVerificacao: '',
-      associacao: '',
-    },
-  });
-
-  // Função para mudar os valores nos campos
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
-  // Função para mudar os dados de entrega
-  const handleEntregaChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      entrega: {
-        ...formData.entrega,
-        [name]: value,
-      },
-    });
-  };
-
-  // Funções de navegação entre as etapas
-  const nextStep = () => setStep((prevStep) => prevStep + 1);
-  const prevStep = () => setStep((prevStep) => prevStep - 1);
-
-  // Função de envio do formulário
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert('Obrigada, o seu pedido foi submetido com sucesso!');
-    setStep(6); // Exibe a tela de confirmação após o envio
-  };
-
-  // Renderiza o componente baseado na etapa
-  const renderStep = () => {
-    switch (step) {
-      case 1:
-        return <Step1 formData={formData} handleChange={handleChange} nextStep={nextStep} />;
-      case 2:
-        return <Step2 formData={formData} handleChange={handleChange} nextStep={nextStep} prevStep={prevStep} />;
-      case 3:
-        return <Step3 formData={formData} handleChange={handleChange} nextStep={nextStep} prevStep={prevStep} />;
-      case 4:
-        return <Step4 formData={formData} handleChange={handleChange} nextStep={nextStep} prevStep={prevStep} />;
-      case 5:
-        return <Step5 formData={formData} handleEntregaChange={handleEntregaChange} handleSubmit={handleSubmit} prevStep={prevStep} />;
-      case 6:
-        return <Step6 />;
-      default:
-        return null;
-    }
-  };
-
   return (
-    <div className="form-container">
-      <h1>Formulário de Pedido</h1>
-      {renderStep()}
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/formulario" element={<FormPage />} />
+        <Route path="/contato" element={<ContactPage />} />
+      </Routes>
+    </Router>
   );
 };
 
