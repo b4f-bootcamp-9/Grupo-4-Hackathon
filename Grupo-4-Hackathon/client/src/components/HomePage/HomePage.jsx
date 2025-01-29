@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom"; // Import the useNavigate hook
 import "../HomePage/HomePage.css";
 import "../FormPage/FormPage"
+import "../ContactPage/ContactPage"
 
 export function HomePage() {
     return (
@@ -35,9 +36,7 @@ export function HomePage() {
                         <div className="button-cont"  >
                             <div className="button-box" >
                                 <Link to={"/formulario"}>
-                                    <button className="button-hello"
-                                    // onClick={handlePedeBoxClick}
-                                    >
+                                    <button className="button-hello">
                                         Pede a tua Box
                                     </button>
                                 </Link>
@@ -72,9 +71,11 @@ export function HomePage() {
                             Vem fazer parte da nossa equipa.
                         </h2>
                         <div className="button-box">
-                            <button className="button-hello">
-                                Contactos
-                            </button>
+                        <Link to={"/contato"}>
+                    <button className="button-hello">
+                        Contacta-nos
+                    </button>
+                </Link>
                         </div>
                     </div>
                 </section>
