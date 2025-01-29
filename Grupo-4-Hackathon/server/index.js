@@ -13,6 +13,7 @@ const startServer = async () => {
         await connectToDatabase();
         console.log('Database is ready');
 
+        // Mount the routes
         app.use("/orders", pedidosRoutes);
         app.use("/api", userRoutes);
 

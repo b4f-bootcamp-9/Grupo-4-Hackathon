@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const authService = require('../services/authService');
-const { verifyToken } = require('../services/authMiddleWare');
+const authService = require('../services/AuthService');
+const verifyToken = require('../services/AuthMiddleWare');
 
+// Route para registar novo usuario
 router.post('/register', async (req, res) => {
     try {
         const result = await authService.registerUser(
@@ -20,6 +21,7 @@ router.post('/register', async (req, res) => {
     }
 });
 
+// Route para login
 router.post('/login', async (req, res) => {
     try {
         const result = await authService.loginUser(
@@ -32,6 +34,7 @@ router.post('/login', async (req, res) => {
     }
 });
 
+// Route para pegar user details
 router.get('/user', verifyToken, async (req, res) => {
     try {
         const result = await authService.getUserDetails(req.user.email);
