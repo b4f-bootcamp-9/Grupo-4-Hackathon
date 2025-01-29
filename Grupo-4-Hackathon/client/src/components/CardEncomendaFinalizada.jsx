@@ -20,7 +20,7 @@ export default function PedidoFinalizado() {
             Mistery Box Preparada. 
           </Typography>
           <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-            Pedido finalizado com sucesso. <br/>
+            Pedido finalizado com sucesso.<br/>
             Obrigado.
           </Typography>
         </CardContent>
