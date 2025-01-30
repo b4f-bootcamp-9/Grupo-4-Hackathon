@@ -1,0 +1,91 @@
+/* General Page Styling */
+.admin-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #EBF5EE; /* Soft pastel green */
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Title */
+  .admin-container h2 {
+    text-align: center;
+    color: #5a5a5a; /* Deep purple */
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* Orders Grid */
+  .admin-orders {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two-column layout */
+    gap: 20px;
+    width: 100%;
+  }
+  
+  /* Individual Order Card */
+  .admin-order-card {
+    background: #BFD1E5; /* Soft blue */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #6d6d6d; 
+    font-weight: bold;
+  }
+  
+  .admin-order-card p {
+    margin: 5px 0;
+  }
+  
+  /* Buttons */
+  .admin-actions {
+    margin-top: 10px;
+  }
+  
+  .admin-actions button {
+    padding: 8px 12px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .accept {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+   cursor: pointer;
+    animation: gradient 15s ease infinite;
+    margin-bottom: 1rem;  }
+  
+  .archive {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+   cursor: pointer;
+    animation: gradient 15s ease infinite;
+    margin-bottom: 1rem;  }
+  
+  .admin-actions button:hover {
+    opacity: 0.8;
+  }
+  

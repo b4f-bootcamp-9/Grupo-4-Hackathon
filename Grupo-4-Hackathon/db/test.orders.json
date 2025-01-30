@@ -1,0 +1,81 @@
+[{
+  "_id": {
+    "$oid": "6799734c7b82ba005626eeda"
+  },
+  "user": {
+    "$oid": "65b7c1234567890123456789"
+  },
+  "childAgeGroup": "Criança (4-14 anos)",
+  "season": "Verão",
+  "clothingItems": {
+    "upperWear": {
+      "size": "M",
+      "quantity": 2
+    },
+    "lowerWear": {
+      "size": "M",
+      "quantity": 2
+    },
+    "footwear": {
+      "size": "34",
+      "quantity": 1
+    }
+  },
+  "pickupLocation": "Porto",
+  "status": "Pendente",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6799740e7b82ba005626eedc"
+  },
+  "user": {
+    "$oid": "65b7c1234567890123456789"
+  },
+  "childAgeGroup": "Criança (4-14 anos)",
+  "season": "Verão",
+  "clothingItems": {
+    "upperWear": {
+      "size": "L",
+      "quantity": 5
+    },
+    "lowerWear": {
+      "size": "M",
+      "quantity": 3
+    },
+    "footwear": {
+      "size": "35",
+      "quantity": 2
+    }
+  },
+  "pickupLocation": "Lisbon",
+  "status": "Pendente",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6799748b7b82ba005626eedf"
+  },
+  "user": {
+    "$oid": "65b7c1234567890123456789"
+  },
+  "childAgeGroup": "Jovem Adulto (14-18 anos)",
+  "season": "Inverno",
+  "clothingItems": {
+    "upperWear": {
+      "size": "XXL",
+      "quantity": 5
+    },
+    "lowerWear": {
+      "size": "S",
+      "quantity": 3
+    },
+    "footwear": {
+      "size": "35",
+      "quantity": 2
+    }
+  },
+  "pickupLocation": "Lisbon",
+  "status": "Pendente",
+  "__v": 0
+}]
