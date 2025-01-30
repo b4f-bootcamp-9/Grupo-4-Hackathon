@@ -28,7 +28,7 @@ export function Navbar() {
     <nav className="navbar">
       <div className="navbar-logo">
         <img
-          src="/Images/logo.png"
+          src="/soci.png"
           alt="Logo Principal"
           className="logo"
           onClick={handleHomeClick}

@@ -1,12 +1,12 @@
 import React from 'react';
-import '../Footer/Footer.css';
+import './Footer.css';
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-grid">
-          {/ Sobre /}
+         
           <div className="footer-section">
             <h3>Mystery Box</h3>
             <p>
@@ -15,7 +15,7 @@ const Footer = () => {
             </p>
           </div>
 
-          {/ Contactos /}
+          
           <div className="footer-section">
             <h3>Contactos</h3>
             <ul>
@@ -25,7 +25,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/ Links Legais /}
+          
           <div className="footer-section">
             <h3>Legal</h3>
             <ul>
@@ -35,7 +35,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/ Juntas de Freguesia */}
+          
           <div className="footer-section">
             <h3>Juntas de Freguesia</h3>
             <ul>

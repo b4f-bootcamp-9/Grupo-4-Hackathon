@@ -4,8 +4,8 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-    color: white;
-    background-color: #55008e;
+    color: rgb(71, 69, 70);
+    background-color: #d1cfbea4;
     position: fixed;
     width: 98%;
     top: 0;
@@ -31,7 +31,7 @@
   }
   
   .navbar-links a {
-    color: rgb(255, 255, 255); /* Cor do texto */
+    color: rgb(71, 69, 70); /* Cor do texto */
     text-decoration: none; /* Remove sublinhado */
     font-size: 1.2rem; /* Tamanho do texto */
     transition: color 0.3s ease;

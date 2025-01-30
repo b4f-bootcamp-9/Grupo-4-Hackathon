@@ -4,6 +4,7 @@ import "../HomePage/HomePage.css";
 import "../FormPage/FormPage"
 import "../ContactPage/ContactPage"
 import { Navbar } from '../Navbar/Navbar';
+import Footer  from '../Footer/Footer';
 
 export function HomePage() {
     return (                                                            
@@ -83,6 +84,7 @@ export function HomePage() {
                     </div>
                 </section>
             </div>
+            <Footer/>
         </body>
     );
 }
