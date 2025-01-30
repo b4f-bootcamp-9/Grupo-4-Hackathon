@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "./AdminPage.css"; // Import the CSS file
+import "./AdminPage.css"; 
 import { Navbar } from '../Navbar/Navbar';
 
-const API_BASE_URL = "http://localhost:3000";
+const API_BASE_URL = "http://localhost:3027";
 
 const AdminOrders = () => {
   const [orders, setOrders] = useState([]);

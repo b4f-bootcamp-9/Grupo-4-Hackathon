@@ -20,7 +20,7 @@ export function ContactPage() {
     const fetchContacts = async () => {
         try {
             setLoading(true);
-            const response = await fetch('http://localhost:3000/contacts');
+            const response = await fetch('http://localhost:3027/contacts');
             if (!response.ok) {
                 throw new Error('Failed to fetch contacts');
             }
@@ -40,7 +40,7 @@ export function ContactPage() {
 
     const handleCreate = async (contactData) => {
         try {
-            const response = await fetch('http://localhost:3000/contacts', {
+            const response = await fetch('http://localhost:3027/contacts', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -59,7 +59,7 @@ export function ContactPage() {
 
     const handleUpdate = async (id, contactData) => {
         try {
-            const response = await fetch(`http://localhost:3000/contacts/${id}`, {
+            const response = await fetch(`http://localhost:3027/contacts/${id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -80,7 +80,7 @@ export function ContactPage() {
     const handleDelete = async (id) => {
         if (window.confirm('Are you sure you want to delete this contact?')) {
             try {
-                const response = await fetch(`http://localhost:3000/contacts/${id}`, {
+                const response = await fetch(`http://localhost:3027/contacts/${id}`, {
                     method: 'DELETE',
                 });
                 if (!response.ok) {
