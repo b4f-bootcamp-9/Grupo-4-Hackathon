@@ -3,10 +3,13 @@ import { Link } from "react-router-dom"; // Import the useNavigate hook
 import "../HomePage/HomePage.css";
 import "../FormPage/FormPage"
 import "../ContactPage/ContactPage"
+import { Navbar } from '../Navbar/Navbar';
 
 export function HomePage() {
-    return (
+    return (                                                            
+
         <body>
+             <Navbar />
             <div className="home-container-hp">
                 <div className="banner-wrapper">
                     <section className="text-wrapper">

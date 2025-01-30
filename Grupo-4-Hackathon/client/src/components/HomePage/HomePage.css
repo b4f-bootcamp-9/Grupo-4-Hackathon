@@ -180,12 +180,18 @@
 
   /* Carrossel */
   
+
+
+
+
+
+
   .carrossel-section {
     height: 600px;
     margin-top: 10%;
     padding-top: 3%;
     margin: 0;
-    display: grid;
+    display: flex;
     grid-template-rows: 500px 100px;
     grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr;
     align-items: center;
@@ -222,6 +228,31 @@
       translateX(calc(-300px * var(--r)));
     z-index: calc((var(--position) - var(--abs)));
   }
+
+
+/* Arranjar carrossel */
+  input[type="radio"] {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    background: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+input[type="radio"]:checked {
+    background-color: #e19e0f;
+}
+
+
+/* Arranjar carrossel */
+
+
+
+
+
   
   div.item:nth-of-type(1) {
     --offset: 1;
@@ -288,12 +319,25 @@
   input:nth-of-type(5):checked ~ main#carousel {
     --position: 5;
   }
+
+
+
   
+  /* Arranjar carrossel */
+
   .homepage-container {
     max-width: 100%;
     margin: 0 auto;
     padding: 0 1rem;
+    display: flex;
+    flex-direction: grid;
+    align-items: center; 
+    justify-content: center; 
+    gap: 15px;
   }
+
+  /* Arranjar carrossel */
+
   
   /* Contact Section */
   .contact-section-hp {

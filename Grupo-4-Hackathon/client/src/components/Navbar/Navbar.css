@@ -5,11 +5,11 @@
     justify-content: space-between;
     padding: 10px 20px;
     color: white;
-    background-color: #006f8e;
+    background-color: #55008e;
     position: fixed;
     width: 98%;
     top: 0;
-    z-index: 1;
+    z-index: 1000;
   }
   
   /* Logo principal */

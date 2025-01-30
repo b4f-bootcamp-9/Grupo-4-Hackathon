@@ -4,11 +4,15 @@ import FormPage from '../src/components/FormPage/FormPage';
 import HomePage from '../src/components/HomePage/HomePage'; 
 import ContactPage from '../src/components/ContactPage/ContactPage';
 import { Login } from './components/LoginPage/LoginPage';
+import { Navbar } from './components/Navbar/Navbar';
+import '../src/components/Navbar/Navbar';
 
 const App = () => {
   return (
     <Router>
+      
       <Routes>
+
         <Route path="/" element={<HomePage />} />
         <Route path="/formulario" element={<FormPage />} />
         <Route path="/contato" element={<ContactPage />} />

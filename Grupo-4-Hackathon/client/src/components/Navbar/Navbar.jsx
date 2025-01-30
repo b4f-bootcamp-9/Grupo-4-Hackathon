@@ -1,27 +1,27 @@
 import { useNavigate } from "react-router-dom";
-import "./NavBar.css";
-import React from "react";
+import "./Navbar.css";
+import React from "react"
 export function Navbar() {
   const navigate = useNavigate();
 
   const handleHomeClick = () => {
-    navigate("/");
+    navigate("/");      /*HomePage*/
   };
 
-  const handleEventosClick = () => {
-    navigate("/eventos");
+  // const handleEventosClick = () => {
+  //   navigate("/eventos");/*Eventos futuros*/
+  // };
+
+  const handleContatoClick = () => {
+    navigate("/contato");/*ContactPage*/
   };
 
-  const handleContactosClick = () => {
-    navigate("/contactos");
-  };
-
-  const handleInscreverClick = () => {
-    navigate("/inscrever");
+  const handleFormularioClick = () => {
+    navigate("/formulario");/*Login*/
   };
 
   const handleLoginClick = () => {
-    navigate("/login");
+    navigate("/login");/*HomePage*/
   };
 
   return (
@@ -36,17 +36,17 @@ export function Navbar() {
       </div>
       <ul className="navbar-links">
         <li>
-          <a href="/eventos" onClick={handleEventosClick}>
-            Eventos
+          <a href="/formulario" onClick={handleFormularioClick}>
+            Requisitar
           </a>
         </li>
         <li>
-          <a href="/inscrever" onClick={handleInscreverClick}>
-            Inscrever Eventos
+          <a href="/login" onClick={handleLoginClick}>
+            Login
           </a>
         </li>
         <li>
-          <a href="/contactos" onClick={handleContactosClick}>
+          <a href="/contato" onClick={handleContatoClick}>
             Contactos
           </a>
         </li>

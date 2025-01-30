@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import "../FormPage/FormPage.css"
+import { Navbar } from '../Navbar/Navbar';
+
+
 
 const API_BASE_URL = 'http://localhost:3000';
 
@@ -357,6 +360,7 @@ const FormPage = () => {
 
   return (
     <div className="app">
+      <Navbar />
       {renderStep()}
     </div>
   );

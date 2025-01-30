@@ -3,6 +3,8 @@ import { ContactCard } from "./ContactCard";
 import { ContactForm } from "./ContactForm";
 import { LoadingSpinner } from "./LoadingSpinner";
 import "./Contact.css";
+import { Navbar } from '../Navbar/Navbar';
+
 export function ContactPage() {
     const [contacts, setContacts] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -92,7 +94,9 @@ export function ContactPage() {
     };
 
     return (
+        
         <div className="main-container">
+              <Navbar />
             <div className="controls">
                 <button 
                     className="refresh-button"
