@@ -4,11 +4,13 @@ import "../HomePage/HomePage.css";
 import "../FormPage/FormPage"
 import "../ContactPage/ContactPage"
 import images from "../../Images/main.jpg"
-import navbar from "../Navbar/Navbar"
+import {Navbar} from "../Navbar/Navbar"
+import Footer  from '../Footer/Footer';
 
 export function HomePage() {
     return (
         <body>
+            <Navbar/>
             <div className="home-container-hp">
                 <div className="banner-wrapper">
                     <section className="text-wrapper">
@@ -87,6 +89,7 @@ export function HomePage() {
                     </div>
                 </section>
             </div>
+            <Footer/>
         </body>
     );
 }
