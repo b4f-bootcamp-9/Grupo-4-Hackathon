@@ -2,6 +2,7 @@ import './LoginPage.css';
 import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Navbar } from '../Navbar/Navbar';
 
 export function Login() {
   const [email, setEmail] = useState("");
@@ -33,6 +34,8 @@ export function Login() {
   };
 
     return (
+      <secton>
+      <Navbar />
  <div class="login-box">
             <h2>Login</h2>
                <form onSubmit={handleSubmit} className="login-form">
@@ -52,6 +55,6 @@ export function Login() {
                   </button>
                   </div>
                </form>
-    </div>
+    </div></secton>
     );
 }

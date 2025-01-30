@@ -1,0 +1,50 @@
+[{
+  "_id": {
+    "$oid": "679a90d87424ef0c0f33462e"
+  },
+  "city": "Porto",
+  "address": "Rua da Vitória, 123, Porto",
+  "email": "porto.location@gmail.com",
+  "phone": "+351 912 345 678",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "679a90d87424ef0c0f33462f"
+  },
+  "city": "Lisboa",
+  "address": "Avenida da Liberdade, 456, Lisbon",
+  "email": "lisbon.location@gmail.com",
+  "phone": "+351 911 234 567",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "679a90d87424ef0c0f334630"
+  },
+  "city": "Sintra",
+  "address": "Rua da Praia, 789, Sintra",
+  "email": "sintra.location@gmail.com",
+  "phone": "+351 913 456 789",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "679a90d87424ef0c0f334631"
+  },
+  "city": "Algarve",
+  "address": "Praia da Rocha, 901, Algarve",
+  "email": "algarve.location@gmail.com",
+  "phone": "+351 916 789 012",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "679a94d3e6e939607eb7ba34"
+  },
+  "city": "Coimbra",
+  "address": "Rua da Universidade, 234, Coimbra",
+  "email": "coimbra.location@gmail.com",
+  "phone": "+351 914 567 890",
+  "__v": 0
+}]
