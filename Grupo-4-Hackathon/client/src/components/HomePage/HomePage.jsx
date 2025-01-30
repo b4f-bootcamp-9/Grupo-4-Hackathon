@@ -3,13 +3,12 @@ import { Link } from "react-router-dom"; // Import the useNavigate hook
 import "../HomePage/HomePage.css";
 import "../FormPage/FormPage"
 import "../ContactPage/ContactPage"
-import { Navbar } from '../Navbar/Navbar';
+import images from "../../Images/main.jpg"
+import navbar from "../Navbar/Navbar"
 
 export function HomePage() {
-    return (                                                            
-
+    return (
         <body>
-             <Navbar />
             <div className="home-container-hp">
                 <div className="banner-wrapper">
                     <section className="text-wrapper">
@@ -21,22 +20,25 @@ export function HomePage() {
                         </div>
                     </section>
                 </div>
+                
 
-                <section className="contact-section-hp">
-                    <div className="contact-content-hp">
-                        <h2 className="title-section-two">SociArte</h2>
-                        <h4>
-                            Um projeto com a ambição de dar
-                            <br />
-                            uma segunda vida a roupas de crianças juntando
-                            <br />
-                            Arte, Sustentabilidade e Diversão.
-                        </h4>
-                        <h4>
-                            Pede a tua Mystery Box 100% gratuita, <br /> com 5 peças de
-                            roupa escolhidas por nós e vive a vida com mais cor.
-                        </h4>
-                        <div className="button-cont"  >
+                <div className="sociarte-container">
+                 <div className="image-section">
+                 <div className="background-hp">
+                </div>
+                </div>
+
+      <div className="text-section-hp-one">
+        <h1 className="title-hp-one">SociArte</h1>
+        <p className="description-hp-one">
+          Um projeto com a ambição de dar uma segunda vida a roupas de crianças juntando 
+          <strong> Arte, Sustentabilidade e Diversão.</strong>
+        </p>
+        <p className="description-hp-one">
+          Pede a tua <strong>Mystery Box 100% gratuita</strong>, 
+          com 5 peças de roupa escolhidas por nós e vive a vida com mais cor.
+        </p>
+        <div className="button-cont"  >
                             <div className="button-box" >
                                 <Link to={"/formulario"}>
                                     <button className="button-hello">
@@ -45,17 +47,19 @@ export function HomePage() {
                                 </Link>
                             </div>
                         </div>
-                    </div>
-                </section>
+      </div>
+    </div>
 
                 {/* Carrossel */}
                 <section className="carrossel-section">
                     <div className="homepage-container">
-                        <input type="radio" name="position" checked />
-                        <input type="radio" name="position" />
-                        <input type="radio" name="position" />
-                        <input type="radio" name="position" />
-                        <input type="radio" name="position" />
+                        <div>
+                            <input type="radio" name="position" checked />
+                            <input type="radio" name="position" />
+                            <input type="radio" name="position" />
+                            <input type="radio" name="position" />
+                            <input type="radio" name="position" />
+                        </div>
                         <main id="carousel">
                             <div className="item"></div>
                             <div className="item"></div>
