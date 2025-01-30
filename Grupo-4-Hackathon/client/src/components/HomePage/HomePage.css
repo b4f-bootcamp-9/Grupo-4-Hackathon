@@ -66,7 +66,7 @@
   }
   
   .knockout-text__background {
-    background-color: #000;
+    background-color: #000000;
     padding: 10px 5px;
     color: #fff;
     overflow: hidden;
@@ -148,7 +148,6 @@
 .button-hello {
   padding: 10px;
   border: none;
-  
   border-radius: 5px;
   color: white;
  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
