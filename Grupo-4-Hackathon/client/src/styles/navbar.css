@@ -1,0 +1,108 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    color: white;
+    background-color: #006f8e;
+    position: fixed;
+    width: 98%;
+    top: 0;
+    z-index: 1;
+  }
+  
+  /* Logo principal */
+  .navbar-logo .logo {
+    height: 48px; /* Ajuste do tamanho do logo */
+    width: auto;
+  }
+  
+  /* Links de navegação */
+  .navbar-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-links li {
+    margin: 0 15px; /* Espaçamento entre os itens */
+  }
+  
+  .navbar-links a {
+    color: rgb(255, 255, 255); /* Cor do texto */
+    text-decoration: none; /* Remove sublinhado */
+    font-size: 1.2rem; /* Tamanho do texto */
+    transition: color 0.3s ease;
+    margin-top: 8px;
+    display: inline-block;
+  }
+  
+  /* Animação nav bar */
+  .navbar li > a:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0.125rem;
+    background: #d45d32;
+    transition: width 0.3s;
+  }
+  .navbar li > a:hover::after {
+    width: 100%;
+    transition: width 0.3s;
+  }
+  
+  .logo {
+    cursor: pointer;
+  }
+  
+  /* Estilo para o Burger Menu */
+  .burger-menu {
+    position: relative;
+    display: flex; /* Garante que o ícone do menu esteja visível */
+    align-items: center;
+  }
+  
+  /* Ícone de login no Burger Menu */
+  .burger-menu .login-icon {
+    height: 30px; /* Altura do ícone */
+    width: auto;
+    cursor: pointer; /* Mostra o cursor de mão */
+    transition: transform 0.2s ease;
+  }
+  
+  .burger-menu .login-icon:hover {
+    transform: scale(1.1); /* Animação ao passar o mouse */
+  }
+  
+  /* Dropdown Menu */
+  .dropdown-menu {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #444; /* Fundo do menu */
+    border: 1px solid #222; /* Borda do menu */
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra do menu */
+    z-index: 1000; /* Garante que o menu fique acima de outros elementos */
+    overflow: hidden; /* Evita overflow dos itens */
+  }
+  
+  /* Itens dentro do Dropdown */
+  .dropdown-menu .menu-item {
+    padding: 10px;
+    color: white;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dropdown-menu .menu-item:hover {
+    background-color: #555; /* Cor de fundo ao passar o mouse */
+  }

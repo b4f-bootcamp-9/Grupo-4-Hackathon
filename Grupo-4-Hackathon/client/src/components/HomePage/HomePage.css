@@ -11,7 +11,7 @@
     height: 100vh;
     font-family: "Dosis";
     font-size: 1.2rem;
-    background-image: url('');
+    /* background-image: url(''); */
   }
   
   /* Banner */
@@ -227,14 +227,14 @@
   div.item:nth-of-type(1) {
     --offset: 1;
     background-color: #90f1ef;
-    background-image: url('');
+    /* background-image: url(''); */
     background-size:cover;
   
   }
   div.item:nth-of-type(2) {
     --offset: 2;
     background-color: #ff70a6;
-    background-image: url('');
+    /* background-image: url(''); */
     background-size: cover;
   }
   div.item:nth-of-type(3) {
